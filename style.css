@@ -139,6 +139,10 @@ img {
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow);
 }
+.box img {
+  min-width: 25px;
+  max-width: 50px;
+}
 footer {
   background-color: var(--dark);
   color: var(--light);
