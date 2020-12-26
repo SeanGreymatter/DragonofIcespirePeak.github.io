@@ -157,12 +157,12 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-@media(max-width: 500px) {
+@media(max-width: 480px) {
   .bannermain h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .nav-intro h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
