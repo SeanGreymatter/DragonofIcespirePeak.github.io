@@ -14,7 +14,7 @@ html {
 body {
   background: #ccc;
   line-height: 1.4;
-  margin: 30px 10px;
+  margin: 30px 50px;
 }
 
 img {
@@ -168,7 +168,7 @@ footer {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   body {
     background: #999;
-    margin: 30px 25px;
-    width: 100%;
+    margin: 30px 30px;
+/*     width: 100%; */
   }
 }
