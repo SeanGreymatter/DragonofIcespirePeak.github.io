@@ -4,3 +4,125 @@
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+
+html {
+  box-sizing: border-box;
+  font-family: arial, helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background: #ccc;
+  line-height: 1.4;
+  margin: 30px 50px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav-main ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-main a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  font-size: 1.1rem;
+  box-shadow: var(--dark);
+}
+
+.nav-main a:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.banner {
+  display: grid;
+  /* grid-template-areas: 1fr 1fr / 1fr 1fr; */
+  grid-template-areas: 'bannermain'
+}
+.bannermain {
+  /* grid-area: 1 / 1 / span 1 / span 1; */
+  grid-area: bannermain;
+  min-height: 200px;
+  background: url("https://sm.ign.com/t/ign_nordic/news/i/its-gonna-/its-gonna-be-easier-than-ever-to-play-dungeons-and-dragons_uqv8.h720.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* display: block; */
+  align-items: center;
+  justify-content: center;
+  /* justify-content: flex-start; */
+  box-shadow: var(--shadow);
+}
+.bannermain h1 {
+  display: block;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  font-size: 4rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  /* border: 2px grey solid; */
+  padding: 0.25rem 1rem;
+}
+.bannermain p {
+  display: block;
+  margin-top: 0;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.5);
+  /* border: 2px grey solid; */
+  padding: 0.25rem 1rem;
+}
+.nav-intro {
+  /* border: 2px red solid; */
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  grid-gap: 0px;
+  min-height: 200px;
+  background: url("https://skaldforge.files.wordpress.com/2019/08/adventures-in-icespire.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+}
+.nav-intro h2 {
+  /* border: 2px blue solid; */
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.75);
+  padding: 0.25rem 1rem;
+  margin: 0;
+}
+.nav-intro p {
+  /* border: 2px green solid; */
+  background-color: rgba(0,0,0,0.75);
+  grid-area: 3 / 2 / 4 / 4;
+  text-align: center;
+  color: var(--primary);
+  margin: 0
+}
+.nav-intro a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
