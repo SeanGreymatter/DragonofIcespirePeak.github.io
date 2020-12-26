@@ -157,7 +157,7 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-@media(max-width: 480px) {
+@media(max-width: 500px) {
   .bannermain h1 {
     font-size: 2rem;
   }
@@ -170,5 +170,16 @@ footer {
     background: #999;
     margin: 30px 30px;
 /*     width: 100%; */
+  .bannermain h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .bannermain p {
+   text-align: center; 
+  }
+  .nav-intro h2 {
+    font-size: 1.5rem;
+  }
+}
   }
 }
