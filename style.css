@@ -4,6 +4,7 @@
   --dark: #333;
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --grey: rgba(0 ,0 ,0 ,0.1);
 }
 a {
   text-decoration: none;
@@ -242,12 +243,12 @@ footer {
   display: block;
   background-color: rgba(0,0,0,0.8);
   padding: 1px 2rem;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .bulk {
   display: grid;
   grid-gap: 5px;
-  grid-template: 25% repeat(3, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(auto-fit, minmax(500px, 1fr) / repeat(4, 1fr));
 }
 .nav-side {
   display: block;
@@ -255,8 +256,12 @@ footer {
   color: var(--dark);
   box-shadow: var(--shadow);
   grid-column: 1 / 2;
-  grid-row: 1 / 5;
+  /* grid-row: 1 / 6; */
   margin: 0;
+  padding-right: 5%;
+}
+.nav-side ul {
+
 }
 .articleBody {
   display: block;
@@ -264,8 +269,8 @@ footer {
   color: var(--dark);
   box-shadow: var(--shadow);
   grid-column: 2 / 6;
-  grid-row: 1 / 5;
-  margin: 0;
+  /* grid-row: 1 / 5; */
+
 }
 .articleBody h2 {
   /* font-weight: bold; */
@@ -287,11 +292,11 @@ footer {
   font-size: 1.5rem;
   font-family: 'Almendra SC', serif;
   color: var(--title);
-  padding: 0 5%;
-  margin-bottom: 0;
+  padding: 0 2.5%;
+  margin: 1rem;
 }
 .articleBody p {
-  padding: 10px 5%;
+  padding: 5px 5%;
   margin: 0;
 }
 .articleBody img {
@@ -299,9 +304,66 @@ footer {
   padding:0 5%;
   padding-top: 2%;
 }
-.articleBody hr {
-  margin: 2% 10%;
+.hr-red hr {
+  margin: 2% 5%;
   border: none;
   height: 1px;
   background-color: var(--title);
+}
+.hr-grey hr {
+  margin: 2% 5%;
+  border: none;
+  height: 1px;
+  background-color: var(--grey);
+}
+.info-panel {
+  border: 1px black solid;
+  background-color: #ccc;
+  box-shadow: var(--shadow);
+  padding: 0;
+  margin: 5%;
+}
+.info-panel h4 {
+  font-style: 'Almendra SC', serif;
+  padding: 0 2.5%;
+}
+.maps {
+  display: grid;
+  grid-gap: o;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.map-a, .map-b {
+  /* border: 2px red solid; */
+  margin: 0;
+  padding: 5%;
+  text-align: center;
+  font-style: 'Almendra SC', serif;
+}
+.char-table {
+  display: grid;
+  place-items: center;
+}
+#ch-table tr:nth-child(even){
+  background-color: var(--light);
+}
+#ch-table tr:nth-child(odd){
+  background-color: #ccc;
+}
+#ch-table th {
+  font-style: 'Almendra SC', serif;
+  background-color: var(--primary);
+  color: var(--title);
+}
+@media (max-width: 700px) {
+  .banner-aux h1 {
+    font-size: 2rem;
+  }
+  .nav-side {
+    grid-column: 1 / 6;
+    /* grid-row: 1 / 2; */
+  }
+  .articleBody {
+    grid-column: 1 / 6;
+    /* grid-row: 2 / 5; */
+  }
 }
